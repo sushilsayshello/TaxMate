@@ -20,27 +20,28 @@
     }
 
     header {
-  background-color: #003366;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-}
+      background-color: #003366;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
     header h1 {
       margin: 0;
       font-size: 2.5rem;
     }
 
-nav {
-  background-color: #005f99;
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-  margin-top: 80px; /* Adjust margin-top to create space below the fixed header */
-}
+    nav {
+      background-color: #005f99;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      margin-top: 80px;
+    }
 
     nav a {
       color: white;
@@ -190,6 +191,56 @@ nav {
     .panel p {
       margin: 15px 0;
     }
+
+    .calculator {
+      background-color: white;
+      padding: 20px;
+      margin-top: 40px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      margin: 40px auto;
+    }
+
+    .calculator h3 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: #003366;
+    }
+
+    .calculator label {
+      display: block;
+      margin: 10px 0;
+      font-size: 1.1rem;
+    }
+
+    .calculator input {
+      width: 100%;
+      padding: 10px;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .calculator button {
+      background-color: #005f99;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .calculator button:hover {
+      background-color: #004466;
+    }
+
+    .calculator p {
+      font-size: 1.2rem;
+      margin-top: 15px;
+    }
   </style>
 </head>
 
@@ -251,16 +302,23 @@ nav {
     <div class="panel">
       <p>TaxMate is a platform that helps Australians, particularly vulnerable and at-risk groups, with tax and superannuation compliance through personalized, AI-driven support and educational resources.</p>
     </div>
-
-    <button class="accordion">Who is TaxMate for?</button>
-    <div class="panel">
-      <p>TaxMate is designed for individuals who may struggle with tax compliance, including older citizens, rural residents, migrants, and those with low digital literacy or financial hardship.</p>
-    </div>
-
-    <button class="accordion">How does the AI Chatbot work?</button>
+<button class="accordion">How does the AI Chatbot work?</button>
     <div class="panel">
       <p>The AI-powered chatbot provides real-time support, answering your tax-related questions, guiding you through tax return submissions, and offering advice in multiple languages.</p>
     </div>
+  </section>
+
+  <!-- Tax Calculator Section -->
+  <section id="tax-calculator" class="content">
+    <h3>Australian Tax Calculator 2024</h3>
+    <p>Use this simple tool to estimate your tax based on your income for the year 2024.</p>
+    
+    <form id="taxForm">
+      <label for="income">Enter your annual income (AUD):</label>
+      <input type="number" id="income" name="income" placeholder="e.g., 50000" required>
+      <button type="button" onclick="calculateTax()">Calculate Tax</button>
+      <p id="result"></p>
+    </form>
   </section>
 
   <footer id="contact">
@@ -282,8 +340,32 @@ nav {
         }
       });
     });
+
+    // Tax Calculator Script
+    const taxBrackets = [
+      { threshold: 0, rate: 0, baseTax: 0 },
+      { threshold: 18201, rate: 0.19, baseTax: 0 },
+      { threshold: 45001, rate: 0.325, baseTax: 5092 },
+      { threshold: 120001, rate: 0.37, baseTax: 29467 },
+      { threshold: 180001, rate: 0.45, baseTax: 51667 },
+    ];
+
+    function calculateTax() {
+      const income = parseFloat(document.getElementById('income').value);
+      let tax = 0;
+
+      if (income > 0) {
+        for (let i = taxBrackets.length - 1; i >= 0; i--) {
+          if (income > taxBrackets[i].threshold) {
+            tax = taxBrackets[i].baseTax + (income - taxBrackets[i].threshold) * taxBrackets[i].rate;
+            break;
+          }
+        }
+      }
+
+      document.getElementById('result').innerText = `Estimated tax: $${tax.toFixed(2)}`;
+    }
   </script>
 
 </body>
-
 </html>
