@@ -6,19 +6,19 @@ TaxMate is a digital solution designed to help vulnerable groups in Australia me
 
 ## **Simulator Screenshots**
 
-<div style="border: 2px solid #ddd; padding: 10px; margin: 10px; display: inline-block; width: 45%;">
+<div style="border: 2px solid #ddd; padding: 10px; margin: 10px; display: inline-block; width: 300px;">
     <img src="https://github.com/user-attachments/assets/6a6dd5f1-d8c0-43a4-b1db-b8d362f67e03" alt="Simulator Screenshot 1" style="width:100%;">
 </div>
 
-<div style="border: 2px solid #ddd; padding: 10px; margin: 10px; display: inline-block; width: 45%;">
+<div style="border: 2px solid #ddd; padding: 10px; margin: 10px; display: inline-block; width: 300px;">
     <img src="https://github.com/user-attachments/assets/9521b4fc-4855-4291-b745-8a312026e351" alt="Simulator Screenshot 2" style="width:100%;">
 </div>
 
-<div style="border: 2px solid #ddd; padding: 10px; margin: 10px; display: inline-block; width: 45%;">
+<div style="border: 2px solid #ddd; padding: 10px; margin: 10px; display: inline-block; width: 300px;">
     <img src="https://github.com/user-attachments/assets/1bc87da6-9d5e-4e56-b848-d9e3d2f45d7f" alt="Simulator Screenshot 3" style="width:100%;">
 </div>
 
-<div style="border: 2px solid #ddd; padding: 10px; margin: 10px; display: inline-block; width: 45%;">
+<div style="border: 2px solid #ddd; padding: 10px; margin: 10px; display: inline-block; width: 300px;">
     <img src="https://github.com/user-attachments/assets/1fd8a758-1091-4f8c-bac8-b4dd957688b1" alt="Simulator Screenshot 4" style="width:100%;">
 </div>
 
