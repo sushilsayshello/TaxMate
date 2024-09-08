@@ -2,172 +2,288 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="TaxMate - Empowering vulnerable groups with tax and superannuation assistance">
-    <title>TaxMate - Tax Inclusion for Vulnerable Groups</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TaxMate - Empowering Vulnerable Australians with Tax and Superannuation Assistance">
+  <title>TaxMate | Simplify Your Tax</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
 
-        header {
-            background-color: #004e92;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
+    body {
+      background-color: #f4f4f9;
+      color: #333;
+    }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
+    header {
+  background-color: #003366;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
 
-        nav {
-            background-color: #003366;
-            padding: 10px;
-            text-align: center;
-        }
+nav {
+  background-color: #005f99;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  margin-top: 80px; /* Adjust margin-top to create space below the fixed header */
+}
 
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
 
-        .hero {
-            background: linear-gradient(to right, #56ccf2, #2f80ed);
-            padding: 60px 20px;
-            text-align: center;
-            color: white;
-        }
+    nav a:hover {
+      color: #ffcc00;
+    }
 
-        .hero h2 {
-            font-size: 2rem;
-            margin-bottom: 10px;
-        }
+    .hero {
+      background: linear-gradient(to right, #56ccf2, #2f80ed);
+      padding: 80px 20px;
+      text-align: center;
+      color: white;
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-        }
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
 
-        .cta-button {
-            background-color: #00aaff;
-            color: white;
-            padding: 10px 20px;
-            font-size: 1rem;
-            text-decoration: none;
-            border-radius: 5px;
-        }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
 
-        section {
-            padding: 20px;
-            text-align: center;
-        }
+    .cta-button {
+      background-color: #ffcc00;
+      color: #003366;
+      padding: 12px 30px;
+      font-size: 1.2rem;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
 
-        .content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+    .cta-button:hover {
+      background-color: #ffd700;
+    }
 
-        .content h3 {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-        }
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
 
-        .content p {
-            font-size: 1.1rem;
-            color: #333;
-        }
+    .content h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #003366;
+    }
 
-        .content img {
-            max-width: 100%;
-            height: auto;
-        }
+    .content p {
+      font-size: 1.1rem;
+      color: #333;
+      max-width: 800px;
+      margin: 0 auto;
+    }
 
-        footer {
-            background-color: #003366;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
 
-        footer p {
-            margin: 0;
-            font-size: 0.9rem;
-        }
-    </style>
+    .feature-box {
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .feature-box h4 {
+      font-size: 1.5rem;
+      color: #005f99;
+      margin-bottom: 10px;
+    }
+
+    .feature-box p {
+      color: #555;
+      font-size: 1rem;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 10px 0;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #ffcc00;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer a:hover {
+      color: #ffd700;
+    }
+
+    .accordion {
+      background-color: #005f99;
+      color: white;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      text-align: left;
+      border: none;
+      outline: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .accordion:hover {
+      background-color: #003366;
+    }
+
+    .panel {
+      padding: 0 18px;
+      background-color: white;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      color: #333;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .panel p {
+      margin: 15px 0;
+    }
+  </style>
 </head>
 
 <body>
 
-    <header>
-        <h1>TaxMate</h1>
-        <p>Empowering Vulnerable Australians with Tax and Superannuation Assistance</p>
-    </header>
+  <header>
+    <h1>TaxMate</h1>
+  </header>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#features">Features</a>
-        <a href="#data">Data Sources</a>
-        <a href="#contact">Contact</a>
-    </nav>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#features">Features</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <section class="hero">
-        <h2>Making Tax Compliance Accessible for Everyone</h2>
-        <p>TaxMate is a digital platform designed to assist vulnerable groups in Australia to manage their tax and super
-            obligations with ease.</p>
-        <a href="#features" class="cta-button">Learn More</a>
-    </section>
+  <section class="hero">
+    <div>
+      <h2>Making Tax Compliance Easy and Accessible for All</h2>
+      <p>TaxMate is a digital platform that helps vulnerable Australians manage their tax and superannuation with ease.</p>
+      <a href="#features" class="cta-button">Explore Features</a>
+    </div>
+  </section>
 
-    <section id="about" class="content">
-        <h3>About TaxMate</h3>
-        <p>TaxMate is a comprehensive digital solution aimed at helping vulnerable and at-risk groups, such as people
-            from culturally diverse backgrounds, low-income individuals, older citizens, and those with low digital
-            literacy, comply with their tax and superannuation obligations. By leveraging open government data and
-            artificial intelligence, TaxMate offers personalized guidance, proactive notifications, and a user-friendly
-            platform to make tax compliance easier for all.</p>
-    </section>
+  <section id="about" class="content">
+    <h3>About TaxMate</h3>
+    <p>TaxMate is designed to support at-risk and vulnerable groups, such as older citizens, migrants, rural residents, and
+      those facing financial difficulties. By leveraging open government data and AI-powered insights, we offer
+      personalized support and guidance, ensuring users can access the benefits they deserve.</p>
+  </section>
 
-    <section id="features" class="content">
-        <h3>Key Features</h3>
-        <p>TaxMate provides a wide range of features designed to simplify the tax process for vulnerable groups:</p>
-        <ul>
-            <li>AI-powered chatbot for 24/7 assistance in multiple languages</li>
-            <li>Proactive notifications and reminders for tax filing deadlines</li>
-            <li>Personalized educational resources in text, video, and audio formats</li>
-            <li>Financial health tools to assess and improve financial stability</li>
-            <li>Mobile-first design to ensure accessibility for all users</li>
-        </ul>
-    </section>
+  <section id="features" class="content">
+    <h3>Key Features</h3>
+    <div class="features">
+      <div class="feature-box">
+        <h4>AI-Powered Assistance</h4>
+        <p>Our AI-driven chatbot provides 24/7 guidance on tax return submissions and super queries in multiple languages.</p>
+      </div>
+      <div class="feature-box">
+        <h4>Proactive Notifications</h4>
+        <p>Receive personalized reminders for tax filing deadlines, super contributions, and available benefits based on
+          your financial situation.</p>
+      </div>
+      <div class="feature-box">
+        <h4>Educational Hub</h4>
+        <p>Access easy-to-understand resources, including video tutorials, FAQs, and step-by-step guides, designed with
+          inclusivity in mind.</p>
+      </div>
+      <div class="feature-box">
+        <h4>Financial Health Tools</h4>
+        <p>Get personalized financial health assessments and suggestions to improve your tax and superannuation management.</p>
+      </div>
+    </div>
+  </section>
 
-    <section id="data" class="content">
-        <h3>Data Sources</h3>
-        <p>TaxMate uses open government datasets to provide valuable insights and support:</p>
-        <ul>
-            <li><a href="https://data.gov.au/dataset/ds-dga-c2251b13-5db1-403e-bbc5-82a473b91d5a/details"
-                    target="_blank">Taxation Statistics 2021-22</a></li>
-            <li><a href="https://data.gov.au/dataset/ds-dga-199009c8-86f4-4b17-b17f-fd9f1798b2fd/details"
-                    target="_blank">Self-Managed Superannuation Funds</a></li>
-            <li><a href="https://data.gov.au/dataset/ds-dga-b131b828-05b3-4d86-97c2-981278d6a77f/details"
-                    target="_blank">Higher Education Loan Program (HELP)</a></li>
-            <li><a href="https://www.abs.gov.au/statistics/industry/technology-and-innovation/household-use-information-technology-australia/latest-release"
-                    target="_blank">Household Use of Information Technology</a></li>
-            <li><a href="https://www.abs.gov.au/census" target="_blank">Census Data</a></li>
-        </ul>
-    </section>
+  <section id="faq" class="content">
+    <h3>Frequently Asked Questions</h3>
+    <button class="accordion">What is TaxMate?</button>
+    <div class="panel">
+      <p>TaxMate is a platform that helps Australians, particularly vulnerable and at-risk groups, with tax and superannuation compliance through personalized, AI-driven support and educational resources.</p>
+    </div>
 
-    <footer id="contact">
-        <p>Contact us at <a href="mailto:support@taxmate.com" style="color: #00aaff;">support@taxmate.com</a></p>
-        <p>&copy; 2024 TaxMate. All Rights Reserved.</p>
-    </footer>
+    <button class="accordion">Who is TaxMate for?</button>
+    <div class="panel">
+      <p>TaxMate is designed for individuals who may struggle with tax compliance, including older citizens, rural residents, migrants, and those with low digital literacy or financial hardship.</p>
+    </div>
+
+    <button class="accordion">How does the AI Chatbot work?</button>
+    <div class="panel">
+      <p>The AI-powered chatbot provides real-time support, answering your tax-related questions, guiding you through tax return submissions, and offering advice in multiple languages.</p>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>Contact us at <a href="mailto:support@taxmate.com">support@taxmate.com</a></p>
+    <p>&copy; 2024 TaxMate. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    const accordions = document.querySelectorAll(".accordion");
+
+    accordions.forEach(accordion => {
+      accordion.addEventListener("click", function () {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    });
+  </script>
 
 </body>
 
 </html>
-
