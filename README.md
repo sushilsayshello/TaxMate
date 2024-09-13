@@ -8,7 +8,7 @@ TaxMate is a digital solution designed to help vulnerable groups in Australia me
 
 Here are some screenshots showcasing TaxMate in action:
 
-<img src="https://github.com/user-attachments/assets/6a6dd5f1-d8c0-43a4-b1db-b8d362f67e03" width="400"/> </br>
+<img src="https://github.com/user-attachments/assets/ac07341c-a099-4528-bb17-bf4f9f7b7265" width="400"/> </br>
 
 <img src="https://github.com/user-attachments/assets/9521b4fc-4855-4291-b745-8a312026e351" width="400"/> </br>
 
@@ -21,6 +21,18 @@ Here are some screenshots showcasing TaxMate in action:
 <img src="https://github.com/user-attachments/assets/33e48de2-3597-4130-ae2a-eb0bc91da5a1" width="400"/> </br>
 
 <img src="https://github.com/user-attachments/assets/b4347eef-dd53-46a4-b58e-f499ec1978e5" width="400"/> </br>
+
+<img src="https://github.com/user-attachments/assets/7aabb50d-ffab-4fb9-b8a7-a9d5621dfcb6" width="400"/> </br>
+
+<img src="https://github.com/user-attachments/assets/4c8db480-8921-4c88-a432-2ecb407beb68" width="400"/> </br>
+
+<img src="https://github.com/user-attachments/assets/dd6c7307-64aa-44df-a50b-239a15f8d0df" width="400"/> </br>
+
+<img src="https://github.com/user-attachments/assets/7114b752-5f0e-4de1-8c73-f05bee5e56c1" width="400"/> </br>
+
+<img src="https://github.com/user-attachments/assets/ad86abc6-5c7d-415e-991d-cd2c167fdabc" width="400"/> </br>
+
+<img src="https://github.com/user-attachments/assets/37385db4-2011-4e3f-afcf-f24c14db00df" width="400"/> </br>
 
 ---
 
